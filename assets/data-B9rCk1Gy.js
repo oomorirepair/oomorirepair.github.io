@@ -200,21 +200,21 @@ Google Pixel,Google pixel 9Pro,"¥8,500","¥25,500","¥25,500",問い合わせ,"
 \r
 Google Pixel,Google pixel 9,"¥8,500","¥24,500","¥24,500",問い合わせ,"¥6,500","¥32,500",,,,,,\r
 \r
-Google Pixel,Google pixel 8Pro,"¥8,500","¥39,500","¥39,500",問い合わせ,"¥6,500","¥32,500",,,,,,\r
+Google Pixel,Google pixel 8Pro,"¥8,500","¥25,500","¥25,500",問い合わせ,"¥6,500","¥32,500",,,,,,\r
 \r
 Google Pixel,Google pixel 8A,"¥8,500","¥24,500","¥24,500",問い合わせ,"¥6,500","¥32,500",,,,,,\r
 \r
 Google Pixel,Google pixel 8,"¥8,500","¥25,500","¥25,500",問い合わせ,"¥6,500","¥32,500",,,,,,\r
 \r
-Google Pixel,Google pixel 7Pro,"¥8,500","¥38,000","¥38,000",問い合わせ,"¥6,500","¥32,500",,,,,,\r
+Google Pixel,Google pixel 7Pro,"¥8,500","¥23,500","¥23,500",問い合わせ,"¥6,500","¥32,500",,,,,,\r
 \r
-Google Pixel,Google pixel 7A,"¥8,500","¥25,500","¥25,500",問い合わせ,"¥6,500","¥32,500",,,,,,\r
+Google Pixel,Google pixel 7A,"¥8,500","¥24,500","¥24,500",問い合わせ,"¥6,500","¥32,500",,,,,,\r
 \r
 Google Pixel,Google pixel 7,"¥8,500","¥24,500","¥24,500",問い合わせ,"¥6,500","¥32,500",,,,,,\r
 \r
-Google Pixel,Google pixel 6Pro,"¥8,500","¥35,500","¥35,500",問い合わせ,"¥6,500","¥32,500",,,,,,\r
+Google Pixel,Google pixel 6Pro,"¥8,500","¥22,500","¥22,500",問い合わせ,"¥6,500","¥32,500",,,,,,\r
 \r
-Google Pixel,Google pixel 6A,"¥8,500","¥25,500","¥25,500",問い合わせ,"¥6,500","¥32,500",,,,,,\r
+Google Pixel,Google pixel 6A,"¥8,500","¥22,500","¥22,500",問い合わせ,"¥6,500","¥32,500",,,,,,\r
 \r
 Google Pixel,Google pixel 6,"¥8,500","¥22,500","¥22,500",問い合わせ,"¥6,500","¥32,500",,,,,,\r
 \r
@@ -361,5 +361,6 @@ Nintendo,Switch Lite,"¥8,500",問い合わせ,問い合わせ,　問い合わ�
 Nintendo, Switch,"¥8,500",問い合わせ,問い合わせ,　問い合わせ,"¥6,500",　問い合わせ,,,,,,\r
 \r
 Nintendo, Switch2,"¥8,500",問い合わせ,問い合わせ,　問い合わせ,"¥6,500",　問い合わせ,,,,,,\r
+\r
 \r
 `,x=d=>{const P=d.split(/\r?\n/).filter(n=>n.trim()!=="");if(P.length<2)return[];const t=n=>{const r=[];let e="",a=!1;for(let i=0;i<n.length;i++){const o=n[i];o==='"'?a=!a:o===","&&!a?(r.push(e.trim().replace(/^"|"$/g,"")),e=""):e+=o}return r.push(e.trim().replace(/^"|"$/g,"")),r},m=t(P[0]),p=new Map;for(let n=1;n<P.length;n++){const r=t(P[n]);if(r.length<2)continue;const e=r[0],a=r[1];if(!e||!a)continue;const i=[];for(let l=2;l<r.length;l++){const s=r[l],c=m[l];s&&c&&i.push({repairType:c,price:s})}const o={model:a,menu:i};p.has(e)||p.set(e,[]),p.get(e)?.push(o)}const h=[];return p.forEach((n,r)=>{h.push({name:r,models:n})}),h},G=x(X),S=[{type:"screen",icon:"📱",name:"画面修理",detail:"ひび割れや液晶破損など、画面のトラブルに対応。高品質な純正同等パーツを使用し、データそのままで修理します。",startingPrice:"¥3,800〜",footer:"作業時間: 30分〜"},{type:"battery",icon:"🔋",name:"バッテリー交換",detail:"充電の減りが早い、突然電源が落ちるなどのバッテリートラブルを解決。PSEマーク認証済みの安心バッテリーを使用。",startingPrice:"¥3,800〜",footer:"作業時間: 30分〜"},{type:"camera",icon:"📷",name:"カメラ修理",detail:"カメラが起動しない、ピントが合わない、レンズが割れたなど、カメラの不具合を修理いたします。",startingPrice:"¥5,800〜",footer:"作業時間: 40分〜"}],y={"@context":"https://schema.org","@type":"LocalBusiness",name:"スマホ修理センター大森店",image:"https://sumahostation.com/placeholder.jpg",address:{"@type":"PostalAddress",streetAddress:"大森北1丁目11−5 共和七番館Be's 館 1F",addressLocality:"大田区区",addressRegion:"東京都",postalCode:"143-0016"},url:"https://sumahostation.com",telephone:"03-5763-5578",openingHoursSpecification:[{"@type":"OpeningHoursSpecification",dayOfWeek:["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],opens:"10:00",closes:"19:00"}]};export{y as m,G as p,S as s};
