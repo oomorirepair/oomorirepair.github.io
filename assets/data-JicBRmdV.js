@@ -1,4 +1,4 @@
-const m=`,機名,バッテリー交換(大容量),画面交換,液晶不良,画面交換(有機EL),背面割れ,水没,基盤修理,充電不良,リアカメラ,カメラレンズ,スピーカー,ホームボタン,フロントカメラ
+const x=`,機名,バッテリー交換(大容量),画面交換,液晶不良,画面交換(有機EL),背面割れ,水没,基盤修理,充電不良,リアカメラ,カメラレンズ,スピーカー,ホームボタン,フロントカメラ
 iPhone,iPhone７,"¥3,300","¥3,500","¥4,500",,"¥8,500","¥5,500","¥18,500","¥6,600","¥6,600","¥4,500","¥4,500","¥4,500","¥5,500"
 iPhone,iPhone7Plus,"¥3,800","¥3,500","¥4,500",,"¥8,500","¥5,500","¥18,500","¥6,600","¥6,600","¥4,500","¥4,500","¥4,500","¥5,500"
 iPhone,iPhone8　,"¥3,800","¥3,500","¥4,500",,"¥8,500","¥5,500","¥18,500","¥6,600","¥8,500","¥4,500","¥4,500","¥4,500","¥5,500"
@@ -180,15 +180,15 @@ Xperia,Xperia Z4,"¥8,500","¥7,500","¥7,500",,　問い合わせ,"¥6,500","¥
 Xperia,Xperia Z3compact,"¥8,500","¥7,500","¥7,500",,　問い合わせ,"¥6,500","¥32,500",問い合わせ,,,,,
 Xperia,Xperia X1compact,"¥8,500","¥7,500","¥7,500",,　問い合わせ,"¥6,500","¥32,500",問い合わせ,,,,,
 Xperia,Xperia Xcompact,"¥8,500","¥7,500","¥7,500",,　問い合わせ,"¥6,500","¥32,500",問い合わせ,,,,,
-ASUS・ZenFone,ASUS・ZenFone,"¥8,500",問い合わせ,問い合わせ,,　問い合わせ,"¥6,500","¥32,500",問い合わせ,,,,,
-OPPO,OPPO,"¥8,500",問い合わせ,問い合わせ,,　問い合わせ,"¥6,500","¥32,500",問い合わせ,,,,,
-AQUOS,AQUOS,"¥8,500",問い合わせ,問い合わせ,,　問い合わせ,"¥6,500","¥32,500",問い合わせ,,,,,
-VIVO,VIVO,"¥8,500",問い合わせ,問い合わせ,,　問い合わせ,"¥6,500","¥32,500",問い合わせ,,,,,
-Xiaomi,Xiaomi,"¥8,500",問い合わせ,問い合わせ,,　問い合わせ,"¥6,500","¥32,500",問い合わせ,,,,,
-HUAWEI,HUAWEI,"¥8,500",問い合わせ,問い合わせ,,　問い合わせ,"¥6,500","¥32,500",問い合わせ,,,,,
+ASUS・ZenFone,ASUS・ZenFone（Zenfone・ROG Phone・その他 / Other models）,"¥8,500",問い合わせ,問い合わせ,,　問い合わせ,"¥6,500","¥32,500",問い合わせ,,,,,
+OPPO,OPPO（Reno・A・Find・その他 / Other models）,"¥8,500",問い合わせ,問い合わせ,,　問い合わせ,"¥6,500","¥32,500",問い合わせ,,,,,
+AQUOS,AQUOS（sense・wish・R・その他 / Other models）,"¥8,500",問い合わせ,問い合わせ,,　問い合わせ,"¥6,500","¥32,500",問い合わせ,,,,,
+VIVO,VIVO（V・Y・X・その他 / Other models）,"¥8,500",問い合わせ,問い合わせ,,　問い合わせ,"¥6,500","¥32,500",問い合わせ,,,,,
+Xiaomi,Xiaomi（Xiaomi・Redmi・POCO・その他 / Other models）,"¥8,500",問い合わせ,問い合わせ,,　問い合わせ,"¥6,500","¥32,500",問い合わせ,,,,,
+HUAWEI,HUAWEI（P・Mate・nova・その他 / Other models）,"¥8,500",問い合わせ,問い合わせ,,　問い合わせ,"¥6,500","¥32,500",問い合わせ,,,,,
 Motorola,Motorola（moto g・edge・razr・その他 / Other models）,"¥8,500",問い合わせ,問い合わせ,,　問い合わせ,"¥6,500","¥32,500",問い合わせ,,,,,
 パソコン,Macbook,　問い合わせ,問い合わせ,問い合わせ,,　問い合わせ,"¥6,500",　問い合わせ,問い合わせ,,,,,
 Nintendo,Switch Lite,"¥8,500",問い合わせ,問い合わせ,,　問い合わせ,"¥6,500",　問い合わせ,問い合わせ,,,,,
 Nintendo, Switch,"¥8,500",問い合わせ,問い合わせ,,　問い合わせ,"¥6,500",　問い合わせ,問い合わせ,,,,,
 Nintendo, Switch2,"¥8,500",問い合わせ,問い合わせ,,　問い合わせ,"¥6,500",　問い合わせ,問い合わせ,,,,,
-`,G=c=>{const P=c.split(/\r?\n/).filter(i=>i.trim()!=="");if(P.length<2)return[];const t=i=>{const e=[];let a="",n=!1;for(let o=0;o<i.length;o++){const r=i[o];r==='"'?n=!n:r===","&&!n?(e.push(a.trim().replace(/^"|"$/g,"")),a=""):a+=r}return e.push(a.trim().replace(/^"|"$/g,"")),e},x=t(P[0]),l=new Map;for(let i=1;i<P.length;i++){const e=t(P[i]);if(e.length<2)continue;const a=e[0],n=e[1];if(!a||!n)continue;const o=[];for(let p=2;p<e.length;p++){const s=e[p],d=x[p];s&&d&&o.push({repairType:d,price:s})}const r={model:n,menu:o};l.has(a)||l.set(a,[]),l.get(a)?.push(r)}const h=[];return l.forEach((i,e)=>{h.push({name:e,models:i})}),h},X=G(m),S=[{type:"screen",icon:"📱",name:"画面修理",detail:"ひび割れや液晶破損など、画面のトラブルに対応。高品質な純正同等パーツを使用し、データそのままで修理します。",startingPrice:"¥3,800〜",footer:"作業時間: 30分〜"},{type:"battery",icon:"🔋",name:"バッテリー交換",detail:"充電の減りが早い、突然電源が落ちるなどのバッテリートラブルを解決。PSEマーク認証済みの安心バッテリーを使用。",startingPrice:"¥3,800〜",footer:"作業時間: 30分〜"},{type:"camera",icon:"📷",name:"カメラ修理",detail:"カメラが起動しない、ピントが合わない、レンズが割れたなど、カメラの不具合を修理いたします。",startingPrice:"¥5,800〜",footer:"作業時間: 40分〜"}],y={"@context":"https://schema.org","@type":"LocalBusiness",name:"スマホ修理センター大森店",image:"https://sumahostation.com/placeholder.jpg",address:{"@type":"PostalAddress",streetAddress:"大森北1丁目11−5 共和七番館Be's 館 1F",addressLocality:"大田区区",addressRegion:"東京都",postalCode:"143-0016"},url:"https://sumahostation.com",telephone:"03-5763-5578",openingHoursSpecification:[{"@type":"OpeningHoursSpecification",dayOfWeek:["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],opens:"10:00",closes:"19:00"}]};export{y as m,X as p,S as s};
+`,G=c=>{const P=c.split(/\r?\n/).filter(i=>i.trim()!=="");if(P.length<2)return[];const t=i=>{const e=[];let n="",a=!1;for(let o=0;o<i.length;o++){const r=i[o];r==='"'?a=!a:r===","&&!a?(e.push(n.trim().replace(/^"|"$/g,"")),n=""):n+=r}return e.push(n.trim().replace(/^"|"$/g,"")),e},m=t(P[0]),l=new Map;for(let i=1;i<P.length;i++){const e=t(P[i]);if(e.length<2)continue;const n=e[0],a=e[1];if(!n||!a)continue;const o=[];for(let p=2;p<e.length;p++){const s=e[p],d=m[p];s&&d&&o.push({repairType:d,price:s})}const r={model:a,menu:o};l.has(n)||l.set(n,[]),l.get(n)?.push(r)}const h=[];return l.forEach((i,e)=>{h.push({name:e,models:i})}),h},X=G(x),S=[{type:"screen",icon:"📱",name:"画面修理",detail:"ひび割れや液晶破損など、画面のトラブルに対応。高品質な純正同等パーツを使用し、データそのままで修理します。",startingPrice:"¥3,800〜",footer:"作業時間: 30分〜"},{type:"battery",icon:"🔋",name:"バッテリー交換",detail:"充電の減りが早い、突然電源が落ちるなどのバッテリートラブルを解決。PSEマーク認証済みの安心バッテリーを使用。",startingPrice:"¥3,800〜",footer:"作業時間: 30分〜"},{type:"camera",icon:"📷",name:"カメラ修理",detail:"カメラが起動しない、ピントが合わない、レンズが割れたなど、カメラの不具合を修理いたします。",startingPrice:"¥5,800〜",footer:"作業時間: 40分〜"}],y={"@context":"https://schema.org","@type":"LocalBusiness",name:"スマホ修理センター大森店",image:"https://sumahostation.com/placeholder.jpg",address:{"@type":"PostalAddress",streetAddress:"大森北1丁目11−5 共和七番館Be's 館 1F",addressLocality:"大田区区",addressRegion:"東京都",postalCode:"143-0016"},url:"https://sumahostation.com",telephone:"03-5763-5578",openingHoursSpecification:[{"@type":"OpeningHoursSpecification",dayOfWeek:["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],opens:"10:00",closes:"19:00"}]};export{y as m,X as p,S as s};
