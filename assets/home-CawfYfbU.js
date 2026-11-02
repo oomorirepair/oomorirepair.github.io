@@ -1,0 +1,1 @@
+import{w as o,p as t}from"./chunk-UIGDSWPH-C1WI0XnH.js";import{H as m}from"./HomePage-skBmIjhm.js";import{h as r}from"./seo-TCH7rhbg.js";import"./LocalizedHomePage-BeynLf6l.js";function i({}){return r("ja")}const f=o(function(){return t.jsx(m,{})});export{f as default,i as meta};
